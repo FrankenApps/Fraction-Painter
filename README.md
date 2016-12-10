@@ -10,4 +10,4 @@ It is very easy. There are two circles and you can control the speed at which th
 
 ## A screenshot to explain:
 
-[![FractionPainter.png](https://s27.postimg.org/8gyhrm3k3/Fraction_Painter.png)](https://postimg.org/image/orylnxg1r/)
+[![FractionPainter.png](https://s23.postimg.org/a3o77ynij/Fraction_Painter.png)](https://postimg.org/image/hweuzxthj/)
