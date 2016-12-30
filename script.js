@@ -1,4 +1,4 @@
-var string1, string2, sphere1, sphere2, theBond1, theBond2, thePoint, layer2, label1, label2, svg;
+var string1, string2, sphere1, sphere2, theBond1, theBond2, thePoint, layer2, label1, label2, svg, zoomed, transform;
 
 var springLength = 100;
 var speed = 1000;
@@ -241,11 +241,16 @@ function update() {
             .call(d3.zoom().on("zoom", function () {
               var delta = d3.event.transform.k - old_k;
               d3.event.transform.k = old_k + zoomFactor*delta;
-              $('#scale').css('width', Math.abs(old_k + zoomFactor*delta)*112);
-              svg.attr("transform", d3.event.transform);
+              zoomed = Math.abs(old_k + zoomFactor*delta)*112;
+              transform = d3.event.transform;
+              $('#scale').css('width', zoomed);
+              svg.attr("transform", transform);
               old_k = d3.event.transform.k;
             }))
         .append("g");
+
+        $('#scale').css('width', zoomed);
+        svg.attr("transform", transform);
 
             var viewport = svg.append('g')
             height = $(window).height();
