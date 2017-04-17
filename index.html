@@ -15,10 +15,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.1/bootstrap-slider.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.1/css/bootstrap-slider.min.css" />
         <!-- D3.js -->
-        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="libs/d3/d3.js"></script>
         <!-- Switchery -->
         <script src="libs/switchery/switchery.min.js"></script>
         <link rel="stylesheet" href="libs/switchery/switchery.min.css">
+        <!-- MathJax -->
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" href="styles.css">
@@ -32,11 +34,12 @@
           <label for="fraction2">Denominator: </label>
           <input type="text" class="form-control" id="fraction2" value="1">
         </div>
-        <label for="time">Time Factor: </label><input id="time" type="text" data-slider-min="1" data-slider-scale="linear" data-slider-max="100" data-slider-step=".1" data-slider-value="50"/>
+        <label for="time">Time Factor: </label><input id="time" type="text" data-slider-min="0.1" data-slider-scale="linear" data-slider-max="100" data-slider-step=".1" data-slider-value="50"/>
         <button type="button" id="stop" class="btn btn-danger" style="display: inline; margin-top: 10px; margin-bottom: 10px">Stop</button>
         <button type="button" id="play" class="btn btn-success" style="display: inline; margin-top: 10px; margin-bottom: 10px">Play</button>
-        <button type="button" id="removeTrace" class="btn btn-warning" onclick="update()" style="display: inline; margin-top: 10px; margin-bottom: 10px">Remove Traces</button>
-        <label for="trace" style="display: inline">Trace (Lissajous pattern): </label><input type="checkbox" class="js-switch" checked id="trace" />
+        <button type="button" id="removeTrace" class="btn btn-warning" onclick="removeTrace()" style="display: inline; margin-top: 10px; margin-bottom: 10px">Remove Traces</button>
+        <label for="trace" style="display: inline">Trace (Lissajous pattern): </label><input type="checkbox" class="js-switch" checked id="trace" /><br /><br /><br /><br />
+        <span id="label" style="font-size: 100px; text-align: center; width: 250px; padding-top: 30px"></span>
       </div>
     </body>
 </html>
